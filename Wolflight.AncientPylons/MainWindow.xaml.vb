@@ -56,26 +56,27 @@
 
     Private Sub RefreshDisplay()
         Try
+            Dim distance As Integer
 
             HighestLeft.Source = New BitmapImage(ImageForPylonColor(cgSolver.Side(4)))
             HighestFacing.Source = New BitmapImage(ImageForPylonColor(cgSolver.Face(4)))
             HighestRight.Source = New BitmapImage(ImageForPylonColor(cgSolver.Side(4)))
-            HighestResult.Text = TextForDirection(cgSolver.GetDirection(4))
+            HighestResult.Text = TextForDirection(cgSolver.GetDirection(4, distance), distance)
 
             HighLeft.Source = New BitmapImage(ImageForPylonColor(cgSolver.Side(3)))
             HighFacing.Source = New BitmapImage(ImageForPylonColor(cgSolver.Face(3)))
             HighRight.Source = New BitmapImage(ImageForPylonColor(cgSolver.Side(3)))
-            HighResult.Text = TextForDirection(cgSolver.GetDirection(3))
+            HighResult.Text = TextForDirection(cgSolver.GetDirection(3, distance), distance)
 
             LowLeft.Source = New BitmapImage(ImageForPylonColor(cgSolver.Side(2)))
             LowFacing.Source = New BitmapImage(ImageForPylonColor(cgSolver.Face(2)))
             LowRight.Source = New BitmapImage(ImageForPylonColor(cgSolver.Side(2)))
-            LowResult.Text = TextForDirection(cgSolver.GetDirection(2))
+            LowResult.Text = TextForDirection(cgSolver.GetDirection(2, distance), distance)
 
             LowestLeft.Source = New BitmapImage(ImageForPylonColor(cgSolver.Side(1)))
             LowestFacing.Source = New BitmapImage(ImageForPylonColor(cgSolver.Face(1)))
             LowestRight.Source = New BitmapImage(ImageForPylonColor(cgSolver.Side(1)))
-            LowestResult.Text = TextForDirection(cgSolver.GetDirection(1))
+            LowestResult.Text = TextForDirection(cgSolver.GetDirection(1, distance), distance)
 
         Catch ex As Exception
             Stop
@@ -108,16 +109,16 @@
         End Select
     End Function
 
-    Private Function TextForDirection(ByVal aDirection As PylonDirection) As String
+    Private Function TextForDirection(ByVal aDirection As PylonDirection, ByVal aDistance As Integer) As String
         Select Case aDirection
             Case PylonDirection.Either
-                Return "Either way"
+                Return "Either way" & Environment.NewLine & "Distance: " & aDistance
             Case PylonDirection.Left
-                Return "Left"
+                Return "Left" & Environment.NewLine & "Distance: " & aDistance
             Case PylonDirection.Right
-                Return "Right"
+                Return "Right" & Environment.NewLine & "Distance: " & aDistance
             Case Else
-                Return "Once Left, Once Right"
+                Return "Once Left, Once Right" & Environment.NewLine & "Distance: " & aDistance
 
         End Select
     End Function

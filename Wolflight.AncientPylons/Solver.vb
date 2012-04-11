@@ -54,47 +54,60 @@ Public Class Solver
     End Property
 
 
-    Public ReadOnly Property GetDirection(ByVal aIndex As Integer) As PylonDirection
-        Get
-            Dim faceValue As PylonColor = Face(aIndex)
-            Dim sideValue As PylonColor = Side(aIndex)
+    Public Function GetDirection(ByVal aIndex As Integer, ByRef aDistance As Integer) As PylonDirection
+        Dim faceValue As PylonColor = Face(aIndex)
+        Dim sideValue As PylonColor = Side(aIndex)
 
+        aDistance = 0
 
-            If faceValue = sideValue Then
-                Return PylonDirection.None
-
-            ElseIf faceValue > sideValue Then
-                Select Case faceValue - sideValue
-                    Case Is = 3
-                        Return PylonDirection.Either
-
-                    Case Is < 3
-                        Return PylonDirection.Right
-
-                    Case Is > 3
-                        Return PylonDirection.Left
-
-                End Select
-
-            Else
-                Select Case sideValue - faceValue
-                    Case Is = 3
-                        Return PylonDirection.Either
-
-                    Case Is < 3
-                        Return PylonDirection.Left
-
-                    Case Is > 3
-                        Return PylonDirection.Right
-
-                End Select
-
-            End If
-
+        If faceValue = sideValue Then
+            aDistance = 2
             Return PylonDirection.None
 
-        End Get
-    End Property
+        ElseIf faceValue > sideValue Then
+            Dim dist As Integer = faceValue - sideValue
+
+
+            Select Case dist
+                Case Is = 3
+                    aDistance = 3
+                    Return PylonDirection.Either
+
+                Case Is < 3
+                    aDistance = dist
+                    Return PylonDirection.Right
+
+                Case Is > 3
+                    aDistance = 6 - dist
+                    Return PylonDirection.Left
+
+            End Select
+
+        Else
+            Dim dist As Integer = sideValue - faceValue
+
+
+            Select Case dist
+                Case Is = 3
+                    aDistance = 3
+                    Return PylonDirection.Either
+
+                Case Is < 3
+                    aDistance = dist
+                    Return PylonDirection.Left
+
+                Case Is > 3
+                    aDistance = 6 - dist
+                    Return PylonDirection.Right
+
+            End Select
+
+        End If
+
+
+        Return PylonDirection.None
+
+    End Function
 
 
 End Class
