@@ -61,7 +61,7 @@ Public Class Solver
         aDistance = 0
 
         If faceValue = sideValue Then
-            aDistance = 2
+            aDistance = 0
             Return PylonDirection.None
 
         ElseIf faceValue > sideValue Then

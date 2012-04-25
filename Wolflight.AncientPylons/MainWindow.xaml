@@ -26,42 +26,42 @@
                     <RowDefinition Name="Lowest" MinHeight="70" />
                 </Grid.RowDefinitions>
 
-                <Button Command="{x:Static custom:MainWindow.ClickSide}"  Grid.Row="0" Grid.Column="0">
+                <Button Command="{x:Static custom:MainWindow.ClickSide}"  Grid.Row="0" Grid.Column="0" MouseRightButtonUp="Execute_RightClickSide">
                     <Image Name="HighestLeft" Source="/Wolflight.AncientPylons;component/Images/White.png" Height="65" Width="65" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"  />
                 </Button>
 
-                <Button Command="{x:Static custom:MainWindow.ClickSide}"  Grid.Row="1" Grid.Column="0">
+                <Button Command="{x:Static custom:MainWindow.ClickSide}"  Grid.Row="1" Grid.Column="0" MouseRightButtonUp="Execute_RightClickSide">
                     <Image Name="HighLeft" Source="/Wolflight.AncientPylons;component/Images/White.png" Height="65" Width="65" Grid.Row="1" Grid.Column="0"  VerticalAlignment="Center" HorizontalAlignment="Center" />
                 </Button>
 
-                <Button Command="{x:Static custom:MainWindow.ClickSide}"  Grid.Row="2" Grid.Column="0">
+                <Button Command="{x:Static custom:MainWindow.ClickSide}"  Grid.Row="2" Grid.Column="0" MouseRightButtonUp="Execute_RightClickSide">
                         <Image Name="LowLeft" Source="/Wolflight.AncientPylons;component/Images/White.png" Height="65" Width="65" Grid.Row="2" Grid.Column="0"  VerticalAlignment="Center" HorizontalAlignment="Center" />
                 </Button>
-                <Button Command="{x:Static custom:MainWindow.ClickSide}"  Grid.Row="3" Grid.Column="0">
+                <Button Command="{x:Static custom:MainWindow.ClickSide}"  Grid.Row="3" Grid.Column="0" MouseRightButtonUp="Execute_RightClickSide">
                             <Image Name="LowestLeft" Source="/Wolflight.AncientPylons;component/Images/White.png" Height="65" Width="65" Grid.Row="3" Grid.Column="0"  VerticalAlignment="Center" HorizontalAlignment="Center" />
                 </Button>
-                <Button Command="{x:Static custom:MainWindow.ClickFace}"  Grid.Row="0" Grid.Column="1">
+                <Button Command="{x:Static custom:MainWindow.ClickFace}"  Grid.Row="0" Grid.Column="1" MouseRightButtonUp="Execute_RightClickFace">
                                 <Image Name="HighestFacing" Source="/Wolflight.AncientPylons;component/Images/White.png" Height="65" Width="65" Grid.Row="0" Grid.Column="1"  VerticalAlignment="Center" HorizontalAlignment="Center" />
                 </Button>
-                <Button Command="{x:Static custom:MainWindow.ClickFace}"  Grid.Row="1" Grid.Column="1">
+                <Button Command="{x:Static custom:MainWindow.ClickFace}"  Grid.Row="1" Grid.Column="1" MouseRightButtonUp="Execute_RightClickFace">
                 <Image Name="HighFacing" Source="/Wolflight.AncientPylons;component/Images/White.png" Height="65" Width="65" Grid.Row="1" Grid.Column="1"  VerticalAlignment="Center" HorizontalAlignment="Center" />
                 </Button>
-                <Button Command="{x:Static custom:MainWindow.ClickFace}"  Grid.Row="2" Grid.Column="1">
+                <Button Command="{x:Static custom:MainWindow.ClickFace}"  Grid.Row="2" Grid.Column="1" MouseRightButtonUp="Execute_RightClickFace">
                         <Image Name="LowFacing" Source="/Wolflight.AncientPylons;component/Images/White.png" Height="65" Width="65" Grid.Row="2" Grid.Column="1"  VerticalAlignment="Center" HorizontalAlignment="Center" />
                     </Button>
-                <Button Command="{x:Static custom:MainWindow.ClickFace}" Grid.Row="3" Grid.Column="1">
+                <Button Command="{x:Static custom:MainWindow.ClickFace}" Grid.Row="3" Grid.Column="1" MouseRightButtonUp="Execute_RightClickFace">
                             <Image Name="LowestFacing" Source="/Wolflight.AncientPylons;component/Images/White.png" Height="65" Width="65" Grid.Row="3" Grid.Column="1"  VerticalAlignment="Center" HorizontalAlignment="Center" />
                         </Button>
-                <Button Command="{x:Static custom:MainWindow.ClickSide}" Grid.Row="0" Grid.Column="2">
+                <Button Command="{x:Static custom:MainWindow.ClickSide}" Grid.Row="0" Grid.Column="2" MouseRightButtonUp="Execute_RightClickSide">
                                 <Image Name="HighestRight" Source="/Wolflight.AncientPylons;component/Images/White.png" Height="65" Width="65" Grid.Row="0" Grid.Column="2"  VerticalAlignment="Center" HorizontalAlignment="Center" />
                 </Button>
-                <Button Command="{x:Static custom:MainWindow.ClickSide}" Grid.Row="1" Grid.Column="2">
+                <Button Command="{x:Static custom:MainWindow.ClickSide}" Grid.Row="1" Grid.Column="2" MouseRightButtonUp="Execute_RightClickSide">
                                         <Image Name="HighRight" Source="/Wolflight.AncientPylons;component/Images/White.png" Height="65" Width="65" Grid.Row="1" Grid.Column="2"  VerticalAlignment="Center" HorizontalAlignment="Center" />
                 </Button>
-                <Button Command="{x:Static custom:MainWindow.ClickSide}"  Grid.Row="2" Grid.Column="2">
+                <Button Command="{x:Static custom:MainWindow.ClickSide}"  Grid.Row="2" Grid.Column="2" MouseRightButtonUp="Execute_RightClickSide">
                 <Image Name="LowRight" Source="/Wolflight.AncientPylons;component/Images/White.png" Height="65" Width="65" Grid.Row="2" Grid.Column="2"  VerticalAlignment="Center" HorizontalAlignment="Center" />
                 </Button>
-                <Button Command="{x:Static custom:MainWindow.ClickSide}" Grid.Row="3" Grid.Column="2">
+                <Button Command="{x:Static custom:MainWindow.ClickSide}" Grid.Row="3" Grid.Column="2" MouseRightButtonUp="Execute_RightClickSide">
                 <Image Name="LowestRight" Source="/Wolflight.AncientPylons;component/Images/White.png" Height="65" Width="65" Grid.Row="3" Grid.Column="2"  VerticalAlignment="Center" HorizontalAlignment="Center" />
                 </Button>
                 <TextBlock Name="HighestResult" Text="Either Way" Grid.Column="3" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center"  TextWrapping="Wrap" TextAlignment="Center"/>
